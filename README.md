@@ -1,2 +1,0 @@
-# Sigmaboy
-Sigma
