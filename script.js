@@ -14,7 +14,7 @@ window.onload = () => {
 };
 
 // Start chat after the username is entered
-document.getElementById('start-chat-btn').addEventListener('click', () => {
+document.getElementById('start-chat-btn')?.addEventListener('click', () => {
   const usernameInput = document.getElementById('username-input').value;
   if (usernameInput.trim() !== '') {
     username = usernameInput;
@@ -104,3 +104,11 @@ socket.on('typing', (isTyping) => {
 });
 
 let typingTimeout;
+
+// Ensure the start button is available before adding event listener
+const startButton = document.getElementById('startButton');
+if (startButton) {
+  startButton.addEventListener('click', () => {
+    window.location.href = "/chat";  // Redirect to the chat page
+  });
+}
