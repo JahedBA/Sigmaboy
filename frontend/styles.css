@@ -1,0 +1,124 @@
+/* Modal for username input */
+#username-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#username-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#username-input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#start-chat-btn {
+  padding: 10px;
+  background-color: #fffc00;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-chat-btn:hover {
+  background-color: #e1e100;
+}
+
+/* Main chat container */
+#chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+/* Messages */
+#messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Message styling */
+.message {
+  padding: 12px 18px;
+  border-radius: 20px;
+  max-width: 75%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.message-sender {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+/* Sent and received messages */
+.message.sent {
+  background-color: #fffc00; /* Snapchat Yellow */
+  color: black;
+  align-self: flex-start; /* Left side for sent messages */
+}
+
+.message.received {
+  background-color: #E8E8E8; /* Light Gray */
+  color: black;
+  align-self: flex-end; /* Right side for received messages */
+}
+
+/* Typing indicator */
+#typing-indicator {
+  font-size: 12px;
+  color: gray;
+  display: none;
+}
+
+/* Input area */
+#input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#message-input {
+  padding: 10px;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#send-btn {
+  padding: 10px;
+  background-color: #fffc00;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#send-btn:hover {
+  background-color: #e1e100;
+}
